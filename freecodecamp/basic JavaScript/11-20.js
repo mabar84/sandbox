@@ -8,3 +8,6 @@ myVar--;
 var myDecimal = 5.7;
 const product2 = 2.0 * 2.5;
 const quotient2 = 4.4 / 2.0; // Change this line
+
+console.clear;
+console.log(-5 % 2);
