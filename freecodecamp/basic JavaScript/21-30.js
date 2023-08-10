@@ -1,3 +1,3 @@
-let myStr = "This is the first sentence.";
-myStr += " ";
-myStr += "This is the second sentence.";
+// Only change code below this line
+const myName = "mabar";
+const myStr = "My name is " + myName + " and I am well!";
