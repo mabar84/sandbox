@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regex-count-lowercase-letters</title>
+  </head>
+  <body>
+    <!-- Your task is simply to count the total number of lowercase letters in a string.
+
+    Examples
+    "abc" ===> 3
+    
+    "abcABC123" ===> 3
+    
+    "abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~" ===> 3
+    
+    "" ===> 0;
+    
+    "ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~" ===> 0
+    97-122
+    "abcdefghijklmnopqrstuvwxyz" ===> 26 -->
+    <script>
+      let str = "abcABC";
+      function lowercaseCount(str) {
+        let counter = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (str[i].charCodeAt() < 123 && str[i].charCodeAt() > 96) {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      console.log(lowercaseCount(str));
+    </script>
+  </body>
+</html>
