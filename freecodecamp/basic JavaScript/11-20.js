@@ -6,3 +6,4 @@ let myVar = 87;
 myVar++;
 myVar--;
 var myDecimal = 5.7;
+const product2 = 2.0 * 2.5;
