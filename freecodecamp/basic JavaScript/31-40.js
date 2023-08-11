@@ -11,3 +11,4 @@ const lastName = "Lovelace";
 lastNameLength = lastName.length;
 myStr = "Hello World"; // Change this line
 const thirdLetterOfLastName = lastName[2]; // Change this line
+const lastLetterOfLastName = lastName[lastName.length - 1]; // Change this line
