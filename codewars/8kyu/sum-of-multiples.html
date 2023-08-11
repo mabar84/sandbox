@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of Multiples</title>
+  </head>
+  <body>
+    Your Job Find the sum of all multiples of n below m Keep in Mind n and m are natural numbers (positive ns) m is excluded from the multiples Examples
+    sumMul(2, 9) ==> 2 + 4 + 6 + 8 = 20 sumMul(3, 13) ==> 3 + 6 + 9 + 12 = 30 sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860 sumMul(4, -7) ==> "INVALID"
+    <script>
+      let n = 2;
+      let m = 9;
+      n = 68;
+      m = 9112;
+      function sumMul(n, m) {
+        if (m - n <= 0) return "INVALID";
+        let sum = 0;
+        if (m % n === 0) {
+          sum -= m;
+        }
+        for (let i = 0; i < Math.floor(m / n); i++) {
+          sum += n * (i + 1);
+        }
+        return sum;
+      }
+      console.log(sumMul(n, m));
+    </script>
+  </body>
+</html>

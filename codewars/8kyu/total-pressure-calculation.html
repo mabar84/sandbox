@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    value1
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total pressure calculation</title>
+  </head>
+  <body>
+    Your task is to create a function that does four basic mathematical operations. The function should take three arguments - operation(string/char),
+    value1(number), value2(number). The function should return result of numbers after applying the chosen operation. Examples(Operator, value1, value2) -- >
+    output ('+', 4, 7) -- > 11 ('-', 15, 18) -- > -3 ('*', 5, 5) -- > 25 ('/', 49, 7) -- > 7
+    <script>
+      let operation = "+",
+        value1 = 2,
+        value2 = 3;
+      function basicOp(operation, value1, value2) {
+        switch (operation) {
+          case "+":
+            return value1 + value2;
+          case "-":
+            return value1 - value2;
+          case "*":
+            return value1 * value2;
+          case "/":
+            return value1 / value2;
+        }
+      }
+      console.log(basicOp(operation, value1, value2));
+    </script>
+  </body>
+</html>
