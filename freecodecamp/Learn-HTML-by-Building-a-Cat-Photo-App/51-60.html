@@ -1,8 +1,8 @@
 <!-- 
-Step 51
-The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.
+Step 56
+There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the same value as the input element's id attribute.
 
-Add a legend element with the text Is your cat an indoor or outdoor cat? above both of the radio buttons.
+Associate the text Loving with the checkbox by nesting only the text Loving in a label element and giving it an appropriate for attribute.
 -->
 
 <html>
@@ -54,7 +54,8 @@ Add a legend element with the text Is your cat an indoor or outdoor cat? above b
           </fieldset>
           <fieldset>
             <legend>What's your cat's personality?</legend>
-            <input type="checkbox" id="loving" /> loving
+            <input type="checkbox" id="loving" />
+            <label for="loving">loving</label>
           </fieldset>
           <input type="text" name="catphotourl" placeholder="cat photo URL" required />
           <button type="submit">Submit</button>
