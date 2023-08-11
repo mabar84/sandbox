@@ -10,3 +10,4 @@ const lastName = "Lovelace";
 // Only change code below this line
 lastNameLength = lastName.length;
 myStr = "Hello World"; // Change this line
+const thirdLetterOfLastName = lastName[2]; // Change this line
