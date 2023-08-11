@@ -26,3 +26,7 @@ const teams = [
   ["Bulls", 23],
   ["White Sox", 45],
 ];
+const myArray = [
+  [1, 2],
+  [3, 4],
+];
