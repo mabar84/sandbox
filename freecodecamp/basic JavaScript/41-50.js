@@ -33,4 +33,4 @@ const myArray = [
 ];
 
 let removedFromMyArray = myArray.shift();
-console.log(myArray);
+myArray.unshift(["Paul", 35]);
