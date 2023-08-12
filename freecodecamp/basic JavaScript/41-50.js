@@ -30,3 +30,5 @@ const myArray = [
   [1, 2],
   [3, 4],
 ];
+
+let myData = myArray[0];
