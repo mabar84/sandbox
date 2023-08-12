@@ -34,3 +34,4 @@ const myArray = [
 ];
 
 const myData = myArray[2][1];
+myArray.push(["dog", 3]);
