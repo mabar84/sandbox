@@ -32,5 +32,5 @@ const myArray = [
   ["cat", 2],
 ];
 
-let removedFromMyArray = myArray.pop();
+let removedFromMyArray = myArray.shift();
 console.log(myArray);
