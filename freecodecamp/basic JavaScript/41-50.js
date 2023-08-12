@@ -32,3 +32,4 @@ const myArray = [
 ];
 
 let myData = myArray[0];
+myArray[0] = 45;
