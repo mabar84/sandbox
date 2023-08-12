@@ -35,3 +35,14 @@ const myArray = [
 
 const myData = myArray[2][1];
 myArray.push(["dog", 3]);
+const threeArr = [1, 4, 6];
+const oneDown = threeArr.pop();
+console.log(oneDown);
+console.log(threeArr);
+
+myArray = [
+  ["John", 23],
+  ["cat", 2],
+];
+
+let removedFromMyArray = myArray.pop();
