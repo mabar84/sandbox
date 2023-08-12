@@ -43,6 +43,10 @@ const myList = [
   ["e", 5],
 ];
 function reusableFunction() {
-  console.log("Hello World");
+  console.log("Hi World");
 }
 reusableFunction();
+
+function functionWithArgs(a, b) {
+  console.log(a + b);
+}
