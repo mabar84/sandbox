@@ -42,3 +42,7 @@ const myList = [
   ["d", 4],
   ["e", 5],
 ];
+function reusableFunction() {
+  console.log("Hello World");
+}
+reusableFunction();
