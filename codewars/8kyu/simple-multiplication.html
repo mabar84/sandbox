@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple-multiplication</title>
+  </head>
+  <body>
+    This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+    <script>
+      let number = 3;
+      function simpleMultiplication(number) {
+        if (number % 2 === 0) {
+          return number * 8;
+        } else {
+          return number * 9;
+        }
+      }
+      console.log(simpleMultiplication(number));
+    </script>
+  </body>
+</html>
