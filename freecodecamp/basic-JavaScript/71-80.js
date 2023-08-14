@@ -1,14 +1,14 @@
 switch (val) {
-  case 1:
-    answer = "alpha";
+  case "a":
+    answer = "apple";
     break;
-  case 2:
-    answer = "beta";
+  case "b":
+    answer = "bird";
     break;
-  case 3:
-    answer = "gamma";
+  case "c":
+    answer = "cat";
     break;
-  case 4:
-    answer = "delta";
+  default:
+    answer = "stuff";
     break;
 }
