@@ -1,14 +1,17 @@
 switch (val) {
-  case "a":
-    answer = "apple";
+  case 1:
+  case 2:
+  case 3:
+    answer = "Low";
     break;
-  case "b":
-    answer = "bird";
+  case 4:
+  case 5:
+  case 6:
+    answer = "Mid";
     break;
-  case "c":
-    answer = "cat";
-    break;
-  default:
-    answer = "stuff";
+  case 7:
+  case 8:
+  case 9:
+    answer = "High";
     break;
 }
