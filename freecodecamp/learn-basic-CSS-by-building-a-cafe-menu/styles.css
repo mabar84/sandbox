@@ -9,5 +9,7 @@ p {
 }
 
 div {
+  background: burlywood;
+
   width: 300px;
 }
