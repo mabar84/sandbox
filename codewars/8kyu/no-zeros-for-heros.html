@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>holiday-duty-free</title>
+  </head>
+  <body>
+    Numbers ending with zeros are boring. They might be fun in your world, but not here. Get rid of them. Only the ending ones. 1450 -> 145 960000 -> 96 1050 ->
+    105 -1050 -> -105
+    <script>
+      let n = 0;
+      function noBoringZeros(n) {
+        if (n == 0) {
+          return n;
+        }
+        while (n % 10 === 0) {
+          n /= 10;
+        }
+        return n;
+
+        //         while(n%10==0 && n!=0){n/=10;}
+        //   return n;
+      }
+      console.log(noBoringZeros(n));
+    </script>
+  </body>
+</html>
