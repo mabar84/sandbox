@@ -13,15 +13,15 @@
     excluding the driver. If there is enough space, return 0, and if there isn't, return the number of passengers he can't take. Usage Examples: cap = 10, on =
     5, wait = 5 -- 0 # He can fit all 5 passengers cap = 100, on = 60, wait = 50 -- 10 # He can't fit 10 of the 50 waiting
     <script>
-      let size = 5;
-      function stringy(size) {
-        let str = "";
-        for (let i = 0; i < size; i++) {
-          str = str + ((i + 1) % 2).toString();
-        }
-        return str;
+      let cap = 100,
+        on = 60,
+        wait = 50;
+      function enough(cap, on, wait) {
+        return cap - on - wait >= 0 ? 0 : -(cap - on - wait);
+
+        // return Math.max(wait + on - cap, 0);
       }
-      console.log(stringy(size));
+      console.log(enough(cap, on, wait));
     </script>
   </body>
 </html>
