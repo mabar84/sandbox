@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find-the-position</title>
+  </head>
+  <body>
+    When provided with a letter, return its position in the alphabet. Input :: "a" Ouput :: "Position of alphabet: 1"
+    <script>
+      let letter = "a";
+
+      function position(letter) {
+        return `Position of alphabet: ${letter.charCodeAt() - 96}`;
+      }
+      console.log(position(letter));
+    </script>
+  </body>
+</html>
