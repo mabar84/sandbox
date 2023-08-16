@@ -19,6 +19,10 @@ p {
   text-align: center;
 }
 
+hr {
+  height: 3px;
+}
+
 .menu {
   max-width: 500px;
   width: 80%;
