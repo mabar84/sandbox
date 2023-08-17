@@ -42,7 +42,7 @@ hr {
 .flavor,
 .dessert {
   text-align: left;
-  width: 75%;
+  width: 74%;
 }
 
 .price {
@@ -59,3 +59,5 @@ hr {
 .bottom-line {
   margin-top: 25px;
 }
+
+/* FOOTER */
