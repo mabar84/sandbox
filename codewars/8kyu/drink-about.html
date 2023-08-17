@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drink about</title>
+  </head>
+  <body>
+    Kids drink toddy. Teens drink coke. Young adults drink beer. Adults drink whisky. Make a function that receive age, and return what they drink. Rules:
+    Children under 14 old. Teens under 18 old. Young under 21 old. Adults have 21 or more. Examples: (Input -- Output) 13 -- "drink toddy" 17 -- "drink coke" 18
+    -- "drink beer" 20 -- "drink beer" 30 -- "drink whisky"
+
+    <script>
+      let old = 14;
+      function peopleWithAgeDrink(old) {
+        let result = "drink ";
+        switch (true) {
+          case old < 14:
+            result += "toddy";
+            break;
+          case old >= 14 && old < 18:
+            result += "coke";
+            break;
+          case old >= 18 && old < 21:
+            result += "beer";
+            break;
+          case old >= 21:
+            result += "whisky";
+            break;
+          default:
+            break;
+        }
+        return result;
+
+        //         const peopleWithAgeDrink = (age) =>
+        //   age < 14 ? "drink toddy" :
+        //   age < 18 ? "drink coke" :
+        //   age < 21 ? "drink beer" : "drink whisky"
+
+        // const peopleWithAgeDrink = old => 'drink ' + (old < 14 ? 'toddy' : old < 18 ? 'coke' : old < 21 ? 'beer' : 'whisky')
+      }
+      console.log(peopleWithAgeDrink(old));
+    </script>
+  </body>
+</html>
