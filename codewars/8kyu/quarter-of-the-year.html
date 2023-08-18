@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quarter-of-the-year</title>
+  </head>
+  <body>
+    <p>
+      Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number. For example: month 2 (February), is part of
+      the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter. Constraint: 1 = month = 12
+    </p>
+
+    <script>
+      let month = 11;
+      const quarterOf = (month) => {
+        return Math.ceil(month / 3);
+      };
+      console.log(quarterOf(month));
+    </script>
+  </body>
+</html>
