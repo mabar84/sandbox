@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculate-average</title>
+  </head>
+  <body>
+    There was a test in your class and you passed it. Congratulations! But you're an ambitious person. You want to know if you're better than the average
+    student in your class. You receive an array with your peers' test scores. Now calculate the average and compare your score! Return True if you're better,
+    else False! Note: Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given
+    array!
+
+    <script>
+      let classPoints = [2, 3],
+        yourPoints = 5;
+
+      function betterThanAverage(classPoints, yourPoints) {
+        classPoints.push(yourPoints);
+        return classPoints.reduce((a, b) => a + b) / classPoints.length < yourPoints;
+      }
+
+      //   function find_average(arr) {
+      //     return arr.length > 0 ? arr.reduce((a, b) => a + b) / arr.length : 0;
+      //   }
+
+      console.log(betterThanAverage(classPoints, yourPoints));
+    </script>
+  </body>
+</html>
