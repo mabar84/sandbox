@@ -7,7 +7,7 @@ h1 {
   margin: 10 auto;
 }
 .one {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
 }
 .two {
   background-color: green;
