@@ -15,3 +15,7 @@ h1 {
 .three {
   background-color: blue;
 }
+
+.container {
+  background-color: rgb(0, 0, 0);
+}
