@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fake-binary</title>
+  </head>
+  <body>
+    Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string. Note: input will
+    never be an empty string
+
+    <script>
+      let x = "45612";
+      function fakeBin(x) {
+        return x
+          .split("")
+          .map((el) => (el > 4 ? "1" : "0"))
+          .join("");
+      }
+      console.log(fakeBin(x));
+    </script>
+  </body>
+</html>
