@@ -5,7 +5,7 @@ h1 {
 .marker {
   height: 25px;
   width: 200px;
-  margin: 10 auto;
+  margin: 10px auto;
 }
 
 .red {
@@ -13,7 +13,7 @@ h1 {
 }
 
 .green {
-  background-color: rgb(0, 0, 0);
+  background-color: #00ff00;
 }
 
 .blue {
