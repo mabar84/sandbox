@@ -9,7 +9,7 @@ h1 {
 }
 
 .red {
-  background: rgb(255, 0, 0);
+  background: linear-gradient(90deg);
 }
 
 .green {
@@ -17,7 +17,7 @@ h1 {
 }
 
 .blue {
-  background-color: rgb(240, 100%, 50%);
+  background-color: hsl(240, 100%, 50%);
 }
 
 .container {
