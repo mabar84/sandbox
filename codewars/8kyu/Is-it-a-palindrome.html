@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Is-it-a-palindrome</title>
+  </head>
+  <body>
+    Write a function that checks if a given string (case insensitive) is a palindrome. A palindrome is a word, number, phrase, or other sequence of symbols that
+    reads the same backwards as forwards, such as madam or racecar, the date and time 12/21/33 12:21, and the sentence: "A man, a plan, a canal – Panama".
+    <script>
+      let str = "madAm";
+      function isPalindrome(str) {
+        let index = Math.floor(str.length / 2);
+        let a = str.length % 2 > 0 ? str.substring(index + 1) : str.substring(index);
+        let b = str.substring(0, index).split("").reverse().join("");
+        console.log(a);
+        console.log(b);
+        return a.toLowerCase() === b.toLowerCase();
+      }
+
+      //       const isPalindrome = (x) => {
+      //   return x.split("").reverse().join("").toLowerCase() === x.toLowerCase() ? true : false
+      // }
+
+      console.log(isPalindrome(str));
+    </script>
+  </body>
+</html>
