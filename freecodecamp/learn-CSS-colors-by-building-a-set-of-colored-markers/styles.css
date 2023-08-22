@@ -17,7 +17,7 @@ h1 {
 }
 
 .blue {
-  background-color: hsl(240, 100%, 50%);
+  background: hsl(240, 100%, 50%);
 }
 
 .container {
