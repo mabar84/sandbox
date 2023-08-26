@@ -1,6 +1,5 @@
 function convertToInteger(str) {
-  return parseInt(str);
+  return parseInt(str, 2);
 }
 
-// convertToInteger("5v6");
-console.log(convertToInteger("s2e4q"));
+console.log(convertToInteger("10011"));
