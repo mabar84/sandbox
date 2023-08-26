@@ -1,7 +1,6 @@
-let myMin = 2,
-  myMax = 4;
-
-function randomRange(myMin, myMax) {
-  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+function convertToInteger(str) {
+  return parseInt(str);
 }
-console.log(randomRange(myMin, myMax));
+
+// convertToInteger("5v6");
+console.log(convertToInteger("s2e4q"));
