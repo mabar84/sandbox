@@ -25,3 +25,7 @@ form {
   min-width: 300px;
   margin: 0 auto;
 }
+fieldset {
+  padding: 2rem 0;
+  border: none;
+}
