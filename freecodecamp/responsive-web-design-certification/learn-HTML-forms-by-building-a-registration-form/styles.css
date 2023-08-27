@@ -31,3 +31,7 @@ fieldset {
   border: none;
   border-bottom: 3px solid #3b3b4f;
 }
+
+fieldset:last-of-type {
+  border: none;
+}
