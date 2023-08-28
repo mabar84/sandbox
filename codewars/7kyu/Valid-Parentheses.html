@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valid-Parentheses</title>
+  </head>
+  <body>
+    DESCRIPTION: Write a function that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true
+    if the string is valid, and false if it's invalid. Examples "()" => true ")(()))" => false "(" => false "(())((()())())" => true
+    <script>
+      let str = "(())((()())())";
+      function validParentheses(str) {
+        let index = 0;
+        while (str.length > 0) {
+          index = str.indexOf(")");
+          if (index > 0 && str[0] !== ")") {
+            str = str.slice(1, index) + str.slice(index + 1);
+          } else {
+            return false;
+          }
+        }
+        return true;
+      }
+      console.log(validParentheses(str));
+
+      //       function validParentheses(parenStr) {
+      //   let counter = 0;
+
+      //   for (let char of parenStr) {
+      //     if (char === "(") counter++;
+      //     if (char === ")") counter--;
+
+      //     if (counter < 0) return false;
+      //   }
+      //   return counter === 0;
+      // }
+    </script>
+  </body>
+</html>
