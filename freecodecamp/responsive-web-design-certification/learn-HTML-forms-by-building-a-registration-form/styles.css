@@ -40,6 +40,7 @@ input,
 textarea,
 select {
   width: 100%;
+  min-height: 2em;
   margin: 10px 0 0;
 }
 
@@ -51,7 +52,6 @@ select {
 
 input,
 textarea {
-  min-height: 2em;
   color: #ffffff;
   background-color: #0a0a23;
   border: 1px solid #0a0a23;
