@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find-the-smallest-integer-in-the-array</title>
+  </head>
+  <body>
+    Given an array of integers your solution should find the smallest integer. For example: Given [34, 15, 88, 2] your solution will return 2 Given [34, -345,
+    -1, 100] your solution will return -345 You can assume, for the purpose of this kata, that the supplied array will not be empty.
+    <script>
+      let a = [3, -4, 9, -1, 2, -6];
+      const SmallestIntegerFinder = (a) => {
+        // let min, max;
+        // for (let i = 0; i < a.length - 1; i++) {
+        //   min = a[i];
+        //   max = a[i + 1];
+        //   if (max < min) {
+        //     a[i] = max;
+        //     a[i + 1] = min;
+        //   }
+        // }
+        let b = a.sort();
+        // let b = a.sort((a, b) => a - b);
+
+        console.table(b);
+        return b[0];
+      };
+      console.log(SmallestIntegerFinder(a));
+    </script>
+  </body>
+</html>

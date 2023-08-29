@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NATO Phonetic Alphabet</title>
+  </head>
+  <body>
+    Complete the function nato that takes a word in parameter and returns a string that spells the word using the NATO phonetic alphabet. There should be a
+    space between each word in the returned string, and the first letter of each word should be capitalized. For those of you that don't want your fingers to
+    bleed, this kata already has a dictionary typed out for you. Examples "hi" --> "Hotel India" "abc" --> "Alpha Bravo Charlie" "babble" --> "Bravo Alpha Bravo
+    Bravo Lima Echo" "Banana" --> "Bravo Alpha November Alpha November Alpha"
+    <script>
+      let word = "";
+      function nato(word) {
+        let d = {
+          A: "Alpha",
+          B: "Bravo",
+          C: "Charlie",
+          D: "Delta",
+          E: "Echo",
+          F: "Foxtrot",
+          G: "Golf",
+          H: "Hotel",
+          I: "India",
+          J: "Juliett",
+          K: "Kilo",
+          L: "Lima",
+          M: "Mike",
+          N: "November",
+          O: "Oscar",
+          P: "Papa",
+          Q: "Quebec",
+          R: "Romeo",
+          S: "Sierra",
+          T: "Tango",
+          U: "Uniform",
+          V: "Victor",
+          W: "Whiskey",
+          X: "X-ray",
+          Y: "Yankee",
+          Z: "Zulu",
+        };
+        let arr = word.toUpperCase().split("");
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] = d[arr[i]];
+        }
+        return arr.join(" ");
+
+        //  return  [...word.toUpperCase()].map(v=>letters[v]).join(' ')
+      }
+      console.log(nato(word));
+    </script>
+  </body>
+</html>
