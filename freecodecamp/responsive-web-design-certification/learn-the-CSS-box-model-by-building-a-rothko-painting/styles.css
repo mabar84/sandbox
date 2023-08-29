@@ -7,5 +7,6 @@
 
 .frame {
   width: 500px;
+  margin: 20px auto;
   border: 50px solid black;
 }
