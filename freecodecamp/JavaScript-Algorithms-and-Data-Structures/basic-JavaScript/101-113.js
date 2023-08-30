@@ -1,11 +1,12 @@
-function checkEqual(a, b) {
-  return a === b ? "Equal" : "Not Equal";
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+
+    countArray.push(n);
+    console.log(n);
+    return countArray;
+  }
 }
-
-checkEqual(1, 2);
-
-function checkSign(n) {
-  return n > 0 ? "positive" : n < 0 ? "negative" : "zero";
-}
-
-checkSign(10);
+console.log(countup(5));
