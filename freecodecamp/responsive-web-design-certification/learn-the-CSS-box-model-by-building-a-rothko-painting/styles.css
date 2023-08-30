@@ -1,14 +1,14 @@
-.canvas {
-  padding: 50px;
-  width: 500px;
-  height: 600px;
-  background-color: #4d0f00;
-}
-
 .frame {
   width: 500px;
   margin: 20px auto;
   border: 50px solid black;
+}
+
+.canvas {
+  padding: 1px;
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
 }
 
 .one {
