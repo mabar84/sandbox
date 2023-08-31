@@ -27,6 +27,7 @@
   margin: 0 auto 20px;
   background-color: #8f0401;
   box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px;
 }
 
 .three {
@@ -36,6 +37,7 @@
   margin: auto;
   filter: blur(2px);
   box-shadow: 0 0 5px 5px #b20403;
+  border-radius: 10px;
 }
 
 .one,
