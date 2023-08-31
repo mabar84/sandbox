@@ -21,7 +21,7 @@
 .two {
   width: 475px;
   height: 200px;
-  margin: auto;
+  margin: 0 auto 20px;
   background-color: #8f0401;
 }
 
