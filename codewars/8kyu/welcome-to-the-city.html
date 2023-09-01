@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    value1
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>welcome-to-the-city</title>
+  </head>
+  <body>
+    Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that
+    should be joined together with one space between each, and the length of the name array in test cases will vary. Example:
+
+    <script>
+      let name = ["John", "Smith"],
+        city = "Phoenix",
+        state = "Arizona";
+      function sayHello(name, city, state) {
+        return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`;
+        // return `Hello, ${name[0]} ${name[1]}! Welcome to ${city}, ${state}!`;
+      }
+      console.log(sayHello(name, city, state));
+    </script>
+  </body>
+</html>
