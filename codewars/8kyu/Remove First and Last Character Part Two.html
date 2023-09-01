@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    value1
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove First and Last Character Part Two</title>
+  </head>
+  <body>
+    If the input string is empty or the removal of the first and last items would cause the resulting string to be empty, return an empty value (represented as
+    a generic value NULL in the examples below). Examples "1,2,3" => "2" "1,2,3,4" => "2 3" "1,2,3,4,5" => "2 3 4" "" => NULL "1" => NULL "1,2" => NULL
+    <script>
+      let str = "2,3,5,6";
+      function array(str) {
+        let arr = str.split(",");
+        console.log(arr);
+        if (arr.length < 3) {
+          return null;
+        }
+        arr.shift();
+        arr.pop();
+        return arr.join(" ");
+      }
+      console.log(array(str));
+    </script>
+  </body>
+</html>
