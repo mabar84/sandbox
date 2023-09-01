@@ -11,3 +11,11 @@ body {
   font-family: sans-serif;
   background-color: #f5f6f7;
 }
+.header {
+  padding: 32px;
+  color: #fff;
+  text-align: center;
+  background-color: #0a0a23;
+  border-bottom: 4px solid #fdb347;
+  text-transform: uppercase;
+}
