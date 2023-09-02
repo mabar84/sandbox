@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    value1
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove First and Last Character Part Two</title>
+  </head>
+  <body>
+    Input: Array of elements ["h","o","l","a"] Output: String with comma delimited elements of the array in th same order. "h,o,l,a" Note: if this seems too
+    simple for you try the next level
+    <script>
+      let arr = ["h", "o", "l", "a"];
+      function printArray(arr) {
+        // let arr = str.split(",");
+        // console.log(arr);
+        // if (arr.length < 3) {
+        //   return null;
+        // }
+        // arr.shift();
+        // arr.pop();
+        // return arr.join(" ");
+        // let str = "3";
+        // let str = "";
+        // for (let i = 0; i < arr.length; i++) {
+        //   arr[i].slice(1, 1);
+        // }
+        // console.log(arr);
+        return arr.map((el) => el).join(",");
+        // return arr.map((el) => el.slice(1, 1));
+      }
+      console.log(printArray(arr));
+    </script>
+  </body>
+</html>
