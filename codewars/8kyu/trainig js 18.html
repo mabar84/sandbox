@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trainig js 18</title>
+  </head>
+  <body>
+    Training JS #18: Methods of String object--concat() split() and its good friend join()
+    <script>
+      let str = "My name is John",
+        sep = "-";
+      function splitAndMerge(str, sep) {
+        let arr = str.split(" ");
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] = arr[i].split("").join(sep);
+        }
+        return arr.join(" ");
+
+        // return str.split(" ").map(word => word.split("").join(sp)).join(" ");
+      }
+
+      //   function plural(n) {
+      //     return n !== 1;
+      //   }
+
+      console.log(splitAndMerge(str, sep));
+    </script>
+  </body>
+</html>
