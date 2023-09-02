@@ -1,12 +1,14 @@
-function countup(n) {
+// Only change code below this line
+
+function countdown(n) {
   if (n < 1) {
     return [];
   } else {
-    const countArray = countup(n - 1);
-
-    countArray.push(n);
-    console.log(n);
-    return countArray;
+    const countArr = countdown(n - 1);
+    countArr.unshift(n);
+    return countArr;
   }
 }
-console.log(countup(5));
+
+console.log(countdown(5));
+// Only change code above this line
