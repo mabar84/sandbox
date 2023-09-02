@@ -10,11 +10,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 .gallery img {
   width: 100%;
   max-width: 350px;
   height: 300px;
+  object-fit: ;
 }
 body {
   margin: 0;
