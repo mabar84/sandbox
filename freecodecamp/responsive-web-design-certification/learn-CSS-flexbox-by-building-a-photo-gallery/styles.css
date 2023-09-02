@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 .gallery {
+  padding: 20px 10px;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
