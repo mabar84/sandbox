@@ -11,12 +11,13 @@
   justify-content: center;
   align-items: center;
   object-fit: cover;
+  gap: 16px;
 }
 .gallery img {
   width: 100%;
   max-width: 350px;
   height: 300px;
-  object-fit: ;
+  object-fit: cover;
 }
 body {
   margin: 0;
