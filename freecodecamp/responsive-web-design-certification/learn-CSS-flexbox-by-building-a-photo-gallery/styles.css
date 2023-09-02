@@ -20,6 +20,10 @@
   object-fit: cover;
   border-radius: 10px;
 }
+.gallery:after {
+  content: "";
+  width: 350px;
+}
 body {
   margin: 0;
   font-family: sans-serif;
