@@ -8,5 +8,7 @@ body {
 
 .label {
   width: 270px;
+  padding: 0 7px;
+  margin: 20px auto;
   border: 2px solid black;
 }
