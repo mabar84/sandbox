@@ -16,31 +16,37 @@
     trunk should be 2 row; and so on. Still not understand the task? Look at the following example Examples For chars = "*@o" and n = 3,the output should be: *
     @ o * @ o |
     <script>
-      let chars = "$@#",
-        //   let chars = " 1\n2 3\n |",
-        n = 3;
+      console.clear();
+
+      let chars = "TCH",
+        n = 10;
       function customChristmasTree(chars, n) {
-        let trunk = "";
-        let tree = "";
+        let trunk = "",
+          branch = [],
+          arr = [],
+          count = 0;
+
+        for (k = 0; k < n; k++) {
+          let spices = "";
+          for (i = 0; i < n - k - 1; i++) {
+            spices += " ";
+          }
+
+          for (i = 0; i < k + 1; i++) {
+            branch[i] = chars[count % chars.length];
+            count++;
+          }
+          arr[k] = spices + branch.join(" ");
+        }
+
         for (k = 0; k < Math.floor(n / 3); k++) {
           for (i = 0; i < n - 1; i++) {
-            trunk += "<";
+            trunk += " ";
           }
           trunk += "|\n";
         }
-
-        for (k = 0; k < n; k++) {
-          for (i = 0; i < n - k - 1; i++) {
-            tree += "1";
-          }
-          tree += chars[k];
-          for (i = 0; i < n - k - 1; i++) {
-            tree += "2";
-          }
-          tree += "\n" + chars[k];
-        }
-
-        return tree + trunk;
+        trunk = trunk.slice(0, -1);
+        return arr.join("\n") + "\n" + trunk;
       }
 
       console.log(customChristmasTree(chars, n));
