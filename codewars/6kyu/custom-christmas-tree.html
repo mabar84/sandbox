@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    value1
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>custom-christmas-tree</title>
+  </head>
+  <body>
+    Task Christmas is coming, and your task is to build a custom Christmas tree with the specified characters and the specified height. Inputs: chars: the
+    specified characters. n: the specified height. A positive integer greater than 2. Output: A multiline string. Each line is separated by \n. A tree contains
+    two parts: leaves and trunks. The leaves should be n rows. The first row fill in 1 char, the second row fill in 3 chars, and so on. A single space will be
+    added between two adjust chars, and some of the necessary spaces will be added to the left side, to keep the shape of the tree. No space need to be added to
+    the right side. The trunk should be at least 1 unit height, it depends on the value of the n. The minimum value of n is 3, and the height of the tree trunk
+    is 1 unit height. If n increased by 3, and the tree trunk increased by 1 unit. For example, when n is 3,4 or 5, trunk should be 1 row; when n is 6,7 or 8,
+    trunk should be 2 row; and so on. Still not understand the task? Look at the following example Examples For chars = "*@o" and n = 3,the output should be: *
+    @ o * @ o |
+    <script>
+      let chars = "$@#",
+        //   let chars = " 1\n2 3\n |",
+        n = 3;
+      function customChristmasTree(chars, n) {
+        let trunk = "";
+        let tree = "";
+        for (k = 0; k < Math.floor(n / 3); k++) {
+          for (i = 0; i < n - 1; i++) {
+            trunk += "<";
+          }
+          trunk += "|\n";
+        }
+
+        for (k = 0; k < n; k++) {
+          for (i = 0; i < n - k - 1; i++) {
+            tree += "1";
+          }
+          tree += chars[k];
+          for (i = 0; i < n - k - 1; i++) {
+            tree += "2";
+          }
+          tree += "\n" + chars[k];
+        }
+
+        return tree + trunk;
+      }
+
+      console.log(customChristmasTree(chars, n));
+    </script>
+  </body>
+</html>
