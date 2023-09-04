@@ -22,3 +22,7 @@ h1 {
   font-weight: 800;
   text-align: center;
 }
+
+p {
+  margin: 0;
+}
