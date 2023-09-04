@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>perfect-squares-perfect-fun</title>
+  </head>
+  <body>
+    Given an integer, if the length of it's digits is a perfect square, return a square block of sqroot(length) * sqroot(length). If not, simply return "Not a
+    perfect square!".
+    <script>
+      //   let int = 1234567890123456;
+      let int = 1;
+      function squareIt(int) {
+        let str = int.toString();
+        let k = Math.sqrt(int.toString().length);
+        if (k === 1) {
+          return str;
+        }
+
+        if (!Number.isInteger(k)) {
+          return "Not a perfect square!";
+        } else {
+          let res = "";
+          for (i = 0; i < k; i++) {
+            res += str.slice(i * k, (i + 1) * k) + "\n";
+          }
+          return res.slice(0, -1);
+        }
+      }
+      console.log(squareIt(int));
+
+      //       function squareIt(int) {
+      //   let n = Math.sqrt(int.toString().length);
+
+      //   if(n !== Math.floor(n)){
+      //     return 'Not a perfect square!'
+      //   } else {
+      //     return int.toString().split('').map((e,i) => (i+1) % n === 0 && i !== (n**2) - 1 ? `${e}\n` : e).join('');
+      //   }
+      // }
+    </script>
+  </body>
+</html>
