@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>regex-count-lowercase-letters</title>
+    <title>Who is going to pay for the wall</title>
   </head>
   <body>
     Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house
@@ -13,17 +13,11 @@
     read them. Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is less
     than or equal to two, it will return an array containing only the name as is"
     <script>
-      let str = "abcABC";
-      function lowercaseCount(str) {
-        let counter = 0;
-        for (let i = 0; i < str.length; i++) {
-          if (str[i].charCodeAt() < 123 && str[i].charCodeAt() > 96) {
-            counter++;
-          }
-        }
-        return counter;
+      let name = "qwert";
+      function whoIsPaying(name) {
+        return name.length > 2 ? [name, name.slice(0, 2)] : [name.slice(0, 2)];
       }
-      console.log(lowercaseCount(str));
+      console.log(whoIsPaying(name));
     </script>
   </body>
 </html>
