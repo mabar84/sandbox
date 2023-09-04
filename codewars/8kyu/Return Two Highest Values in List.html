@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return Two Highest Values in List</title>
+  </head>
+  <body>
+    In this kata, your job is to return the two distinct highest values in a list. If there're less than 2 unique values, return as many of them, as possible.
+    The result should also be ordered from highest to lowest. Examples: [4, 10, 10, 9] => [10, 9] [1, 1, 1] => [1] [] => []
+    <script>
+      let arr = [31427, 23058, 4884, 95181, 64733, 92703, 94264, 58550, 86741, 34623, 63143, 73756, 45820, 16227, 39809, 92211];
+      //    : expected [ 94264, 95181 ] to deeply equal [ 95181, 94264 ]
+
+      //   let arr = [15, 20];
+      //   let arr = [15, 20, 20, 17];
+
+      //   arr = [
+      //     87760, 76017, 9871, 45983, 42076, 40411, 69446, 39218, 67235, 44554, 1978, 81009, 74437, 28316, 86933, 81215, 12497, 39336, 33526, 95550, 670, 96285,
+      //     94470, 54061, 67523, 68072, 88544, 32287,
+      //   ];
+      //   [ 9871, 96285 ]
+      // [ 96285, 95550 ]
+
+      function twoHighest(arr) {
+        if (arr.length === 0) {
+          return [];
+        }
+        if (arr.length === 1) {
+          return arr;
+        }
+
+        arr.sort((a, b) => {
+          return b - a;
+        });
+
+        if (arr.length === 2) {
+          if (arr[0] !== arr[1]) {
+            return [arr[0], arr[1]];
+          } else {
+            return arr[0];
+          }
+        }
+
+        if (arr[0] !== arr[1]) {
+          return [arr[0], arr[1]];
+        } else {
+          return [arr[1], arr[2]];
+        }
+      }
+      console.log(twoHighest(arr));
+      //   function twoHighest(arr) {
+      //     return [...new Set(arr)].sort((a, b) => b - a).slice(0, 2);
+      //   }
+    </script>
+  </body>
+</html>
