@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 string addition</title>
+  </head>
+  <body>
+    It is easy to join two strings together like this string1 + string2. Another way to get the desired result would be with string1.concat(string2) ES6 has
+    introduced another way of joining strings. Your task is to find out what this is and write a function that will add two strings together, there must be a
+    space between the two strings. + , .concat() & .join() will not be allowed in this exercise. I have also removed some other methods that can be used to
+    cheat! If one of the arguments is a number your code must coerce it into being a string.
+
+    <script>
+      let str1 = 123,
+        str2 = "456";
+      str2 = "john McClane";
+      function joinStrings(str1, str2) {
+        // let b = [...str1.toString(), " ", ...str2.toString()].toString("");
+        // console.log(b);
+        // // let ans = "";
+        // // for (let i = 0; i < b.length; i++) {
+        // //   ans += b[i];
+        // // }
+        // return [...str1.toString(), " ", ...str2.toString()].toString();
+      }
+
+      console.log(joinStrings(str1, str2));
+    </script>
+  </body>
+</html>
