@@ -1,20 +1,30 @@
-console.log(234);
-
-const result = {
-  success: ["max-length", "no-amd", "prefer-arrow-functions"],
-  failure: ["no-var", "var-on-top", "linebreak"],
-  skipped: ["no-extra-semi", "no-dup-keys"],
-};
-function makeList(arr) {
-  // Only change code below this line
-  const failureItems = [];
-  for (let i = 0; i < arr.length; i++) {
-    console.log(i);
-    failureItems[i] = `<li class=\"text-warning">${arr[i]}</li>`;
+// Explicit constructor
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
   }
-  return failureItems;
+  takeOff() {
+    console.log("To " + this.targetPlanet + "!");
+  }
 }
 
-const failuresList = makeList(result.failure);
+// Implicit constructor
+class Rocket {
+  launch() {
+    console.log("To the moon!");
+  }
+}
 
-console.log(failuresList);
+const zeus = new SpaceShuttle("Jupiter");
+// prints To Jupiter! in console
+zeus.takeOff();
+
+const atlas = new Rocket();
+// prints To the moon! in console
+atlas.launch();
+
+class Vegetable {
+  constructor(name) {
+    this.name = name;
+  }
+}
