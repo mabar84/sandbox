@@ -17,7 +17,7 @@ body {
   border: 2px solid black;
 }
 
-h1 {
+header h1 {
   margin: -4px 0;
   font-weight: 800;
   text-align: center;
@@ -26,6 +26,8 @@ h1 {
 
 p {
   margin: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .divider {
@@ -35,4 +37,13 @@ p {
 
 .bold {
   font-weight: 800;
+}
+
+.large {
+  height: 10px;
+}
+
+.large,
+.medium {
+  background-color: black;
 }
