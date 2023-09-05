@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vowel-remover</title>
+  </head>
+  <body>
+    Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string. Examples "hello" -- "hll" "codewars" -- "cdwrs"
+    "goodbye" -- "gdby" "HELLO" -- "HELLO"
+    <script>
+      let str = "hello";
+      function shortcut(str) {
+        let set = "aeiou";
+        let answer = "";
+        for (i = 0; i < str.length; i++) {
+          if (set.indexOf(str[i]) < 0) {
+            console.log(1);
+            answer += str[i];
+          }
+        }
+        return answer;
+      }
+      console.log(shortcut(str));
+    </script>
+  </body>
+</html>
