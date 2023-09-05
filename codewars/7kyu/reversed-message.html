@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reversed-message</title>
+  </head>
+  <body>
+    Reverse a message so that the words and letters passed into it are made lower case and reversed. In addition, capitalise the first letter of the newly
+    reversed words. If a number or symbol(!#,>) is now in the first position of the word, no capitalisation needs to occur. Example: reverseMessage('This is an
+    example of a Reversed Message!'); Returns: '!egassem Desrever A Fo Elpmaxe Na Si Siht'
+
+    <script>
+      let str = "This is an example of a Reversed Message!";
+      //   str = "abcQWE";
+
+      //   let str = '!egassem Desrever A Fo Elpmaxe Na Si Siht';
+      function reverseMessage(str) {
+        // str=str
+        //A65,a97,Z90,z122
+        // let a = String.fromCharCode(98);
+        // let arr = str.split(" ").reverse();
+        let arr = str.split(" ");
+        console.log(arr);
+        let b = arr.map((word) => {
+          console.log(word);
+          let el = word.split("").reverse();
+          console.log(el);
+          //   for (i = 0; i < el.length; i++) {
+          //     // console.log(el[i].charCodeAt());
+
+          //     if (el[i].charCodeAt() > 64 && el[i].charCodeAt() < 91) {
+          //       el[i] = String.fromCharCode(el[i].charCodeAt() + 32);
+          //     } else if (el[i].charCodeAt() > 96 && el[i].charCodeAt() < 123) {
+          //       el[i] = String.fromCharCode(el[i].charCodeAt() - 32);
+          //     }
+          //     console.log(el);
+
+          //     //   console.log(str[i].charCodeAt());
+          //   }
+          return el;
+        });
+        // console.log(b);
+
+        // for (i = 0; i < arr.length; i++) {
+        //   console.log(arr[i].charCodeAt());
+
+        //   if (arr[i].charCodeAt() > 64 && arr[i].charCodeAt() < 91) {
+        //     arr[i] = String.fromCharCode(arr[i].charCodeAt() + 32);
+        //   } else if (arr[i].charCodeAt() > 96 && arr[i].charCodeAt() < 123) {
+        //     arr[i] = String.fromCharCode(arr[i].charCodeAt() - 32);
+        //   }
+
+        //   //   console.log(str[i].charCodeAt());
+        // }
+
+        return str;
+      }
+      console.log(reverseMessage(str));
+
+      //       function squareIt(int) {
+      //   let n = Math.sqrt(int.toString().length);
+
+      //   if(n !== Math.floor(n)){
+      //     return 'Not a perfect square!'
+      //   } else {
+      //     return int.toString().split('').map((e,i) => (i+1) % n === 0 && i !== (n**2) - 1 ? `${e}\n` : e).join('');
+      //   }
+      // }
+    </script>
+  </body>
+</html>
