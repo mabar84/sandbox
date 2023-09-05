@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pillars</title>
+  </head>
+  <body>
+    Write function bmi that calculates body mass index (bmi = weight / height2). if bmi <= 18.5 return "Underweight" if bmi <= 25.0 return "Normal" if bmi <=
+    30.0 return "Overweight" if bmi > 30 return "Obese"
+    <script>
+      let numPill = 1,
+        dist = 15,
+        width = 30;
+      function pillars(numPill, dist, width) {
+        if (numPill > 1) {
+          return dist * 100 * (numPill - 1) + width * (numPill - 2);
+        } else return 0;
+      }
+
+      console.log(pillars(numPill, dist, width));
+    </script>
+  </body>
+</html>
