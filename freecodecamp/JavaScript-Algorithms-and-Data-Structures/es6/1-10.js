@@ -1,25 +1,24 @@
-let obj = {
-  name: "FreeCodeCamp",
-  review: "Awesome",
+const user = {
+  johnDoe: {
+    age: 34,
+    email: "johnDoe@freeCodeCamp.com",
+  },
 };
-Object.freeze(obj);
-obj.review = "bad";
-obj.newProp = "Test";
-console.log(obj);
+const {
+  johnDoe: { age, email },
+} = user;
 
-function freezeObj() {
-  const MATH_CONSTANTS = {
-    PI: 3.14,
-  };
-  // Only change code below this line
-  Object.freeze(MATH_CONSTANTS);
+console.log(email);
 
-  // Only change code above this line
-  try {
-    MATH_CONSTANTS.PI = 99;
-  } catch (ex) {
-    console.log(ex);
-  }
-  return MATH_CONSTANTS.PI;
-}
-const PI = freezeObj();
+// const LOCAL_FORECAST = {
+//     yesterday: { low: 61, high: 75 },
+//     today: { low: 64, high: 77 },
+//     tomorrow: { low: 68, high: 80 }
+//   };
+
+const {
+  today: { low: lowToday, high: highToday },
+} = LOCAL_FORECAST;
+
+//   const lowToday = LOCAL_FORECAST.today.low;
+//   const highToday = LOCAL_FORECAST.today.high;
