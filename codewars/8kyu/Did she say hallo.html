@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Did she say hallo</title>
+  </head>
+  <body>
+    These are the languages of the possible people you met the night before: hello - english ciao - italian salut - french hallo - german hola - spanish ahoj -
+    czech republic czesc - polish
+    <script>
+      let a = ["hello", "ciao", "salut", "hallo", "hola", "ahoj", "czesc"],
+        // greetings = "sdfsdf hEllo dcvdf";
+        greetings = "aHOj; wIE. bIeN; yOu:";
+      function validateHello(greetings) {
+        let a = ["hello", "ciao", "salut", "hallo", "hola", "ahoj", "czesc"];
+        greetings = greetings.toLowerCase();
+        return a.some((el) => greetings.indexOf(el) !== -1);
+      }
+
+      //       const hellos = {
+      // hello: 'english',
+      // ciao: 'italian',
+      // salut: 'french',
+      // hallo: 'german',
+      // hola: 'spanish',
+      // ahoj: 'czech republic',
+      // czesc: 'polish',
+      // }
+
+      // const validateHello = greetings => {
+      //   for (key in hellos) {
+      //    if (greetings.toLowerCase().includes(key)) {
+      //      return true
+      //    }
+      //   }
+      //   return false
+      // }
+
+      //       function validateHello(greetings) {
+      //   return /(ahoj|ciao|czesc|h[ae]llo|hola|salut)/i.test(greetings)
+      // }
+
+      console.log(validateHello(greetings));
+    </script>
+  </body>
+</html>
