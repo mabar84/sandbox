@@ -1,13 +1,25 @@
-let printNumTwo;
-for (let i = 0; i < 3; i++) {
-  if (i === 2) {
-    printNumTwo = function () {
-      return i;
-    };
+let obj = {
+  name: "FreeCodeCamp",
+  review: "Awesome",
+};
+Object.freeze(obj);
+obj.review = "bad";
+obj.newProp = "Test";
+console.log(obj);
+
+function freezeObj() {
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+  // Only change code below this line
+  Object.freeze(MATH_CONSTANTS);
+
+  // Only change code above this line
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
   }
+  return MATH_CONSTANTS.PI;
 }
-console.log(printNumTwo());
-console.log(i);
-s[0] = 5;
-s[1] = 7;
-s[2] = 2;
+const PI = freezeObj();
