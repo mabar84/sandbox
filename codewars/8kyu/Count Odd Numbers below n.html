@@ -7,13 +7,16 @@
   </head>
   <body>
     <script>
-      let n = 7;
-      function oddCount(n) {
-        for (let i = 0; i < n; i++) {}
-        console.log(n);
-        return n;
+      let n = 3,
+        s = "ha";
+      function repeatStr(n, s) {
+        let ans = "";
+        for (let i = 0; i < n; i++) {
+          ans += s;
+        }
+        return ans;
       }
-      console.log(oddCount(n));
+      console.log(repeatStr(n, s));
       //   const oddCount = n => Math.floor(n/2) ;
     </script>
   </body>
