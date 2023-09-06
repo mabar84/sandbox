@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twice as old</title>
+  </head>
+  <body>
+    Your function takes two arguments: current father's age (years) current age of his son (years) Сalculate how many years ago the father was twice as old as
+    his son (or in how many years he will be twice as old). The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
+
+    <script>
+      let dadYearsOld = 22,
+        sonYearsOld = 1;
+      function twiceAsOld(dadYearsOld, sonYearsOld) {
+        let i = 0;
+        const k = dadYearsOld / sonYearsOld > 2 ? 1 : -1;
+
+        while (dadYearsOld + i * k !== 2 * (sonYearsOld + i * k)) {
+          i++;
+        }
+        return i;
+      }
+
+      //   return Math.abs(dadYearsOld - 2 * sonYearsOld);
+
+      console.log(twiceAsOld(dadYearsOld, sonYearsOld));
+    </script>
+  </body>
+</html>
