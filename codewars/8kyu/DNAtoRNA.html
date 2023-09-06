@@ -9,7 +9,16 @@
     "GCAT" => "GCAU"
     <script>
       let dna = "GCAT";
+      let n = 12345;
       function DNAtoRNA(dna) {
+        console.log(
+          n
+            .toString()
+            .split("")
+            .reverse()
+            .map((el) => +el)
+        );
+
         let ans = "";
         for (let i = 0; i < dna.length; i++) {
           dna[i] === "T" ? (ans += "U") : (ans += dna[i]);
