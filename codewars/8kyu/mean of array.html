@@ -9,17 +9,13 @@
     You get an array of numbers, return the sum of all of the positives ones. Example [1,-4,7,12] => 1 + 7 + 12 = 20 Note: if there is nothing to sum, the sum
     is default to 0.
     <script>
-      let arr = [-2, -3];
-      function positiveSum(arr) {
-        arr = arr.filter((el) => el > 0);
-        console.log(Math.round(20 / 3));
-        if (!arr.length) {
-          return 0;
-        }
-        return arr.reduce((a, b) => a + b);
+      let marks = [1, 11, 1, 1, 2];
+      function getAverage(marks) {
+        let a = Math.floor(marks.reduce((a, b) => a + b) / marks.length);
+        return a;
       }
       //   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
-      console.log(positiveSum(arr));
+      console.log(getAverage(marks));
     </script>
   </body>
 </html>
