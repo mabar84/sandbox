@@ -1,4 +1,5 @@
-let testStr = "freeCodeCamp";
-let testRegex = /ee2|CoD|c/;
-// testRegex.test(testStr);
-console.log(testRegex.test(testStr));
+let myString = "freeCodeCamp";
+let fccRegex = /freeCodeCamp/i; // Change this line
+let result = fccRegex.test(myString);
+
+console.log(34);
