@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Price Excluding VAT</title>
+  </head>
+  <body>
+    If a product price is 200.00 and VAT is 15%, then the final product price
+    (with VAT) is: 200.00 + 15% = 230.00 Thus, if your function receives 230.00
+    as input, it should return 200.00 Notes: VAT is always 15% for the purposes
+    of this Kata. Round the result to 2 decimal places. If null value given then
+    return -1
+
+    <script>
+      let price = 230;
+
+      function excludingVatPrice(price) {
+        // if (price === 0) return 0;
+        // return price ? +(price / 1.15).toFixed(3) : -1;
+
+        return price === null ? -1 : +(price / 1.15).toFixed(2);
+      }
+
+      console.log(excludingVatPrice(price));
+    </script>
+  </body>
+</html>
