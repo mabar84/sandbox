@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculating with Functions</title>
+  </head>
+  <body>
+    This time we want to write calculations using functions and get the results.
+    Let's have a look at some examples: seven(times(five())); // must return 35
+    four(plus(nine())); // must return 13 eight(minus(three())); // must return
+    5 six(dividedBy(two())); // must return 3 Requirements: There must be a
+    function for each number from 0 ("zero") to 9 ("nine") There must be a
+    function for each of the following mathematical operations: plus, minus,
+    times, dividedBy Each calculation consist of exactly one operation and two
+    numbers The most outer function represents the left operand, the most inner
+    function represents the right operand Division should be integer division.
+    For example, this should return 2, not 2.666666...:
+    eight(dividedBy(three()));
+    <script>
+      console.clear();
+      let start = "1.2.3.4",
+        end = "5.6.7.8";
+      function ipsBetween(start, end) {
+        const foo = (arr) => {
+          return arr
+            .split(".")
+            .map((el, ind) => el * 256 ** (3 - ind))
+            .reduce((a, b) => a + b);
+        };
+        return foo(end) - foo(start);
+      }
+
+      //       function sortThePile(pileOfTowels, weeklyUsedTowels) {
+
+      //   const max = Math.max(...weeklyUsedTowels)
+      //   ,  unused = pileOfTowels.slice(0, -max)
+      //   ,  washed = pileOfTowels.slice(-max).sort().reverse();
+
+      //   return max ? [ ...unused, ...washed ] : pileOfTowels;
+
+      // }
+
+      console.log(ipsBetween(start, end));
+    </script>
+  </body>
+</html>
