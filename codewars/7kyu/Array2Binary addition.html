@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array2Binary addition</title>
+  </head>
+  <body>
+    Given an array containing only integers, add all the elements and return the
+    binary equivalent of that sum. If the array contains any non-integer element
+    (e.g. an object, a float, a string and so on), return false. Note: The sum
+    of an empty array is zero. arr2bin([1,2]) == '11' arr2bin([1,2,'a']) ==
+    false
+    <script>
+      let arr = [1, true];
+
+      function arr2bin(arr) {
+        let res = 0;
+        const b = arr.filter((el) => typeof el !== "number");
+        if (b.length) {
+          return false;
+        }
+        if (arr.length) {
+          res = arr.reduce((a, b) => a + b);
+        }
+        return (res >>> 0).toString(2);
+      }
+      console.log(arr2bin(arr));
+
+      // function arr2bin(a) {
+      //   if (a.some((x) => typeof x != "number"))
+      //     return false;
+      //   return a.reduce((a, b) => a + b, 0).toString(2);
+      // }
+    </script>
+  </body>
+</html>
