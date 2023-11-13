@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Mash</title>
+  </head>
+  <body>
+    Mash 2 arrays together so that the returning array has alternating elements
+    of the 2 arrays . Both arrays will always be the same length. eg. [1,2,3] +
+    ['a','b','c'] = [1, 'a', 2, 'b', 3, 'c']
+    <script>
+      let arr1 = [1, 2, 3];
+      let arr2 = ["a", "b", "c"];
+
+      function arrayMash(arr1, arr2) {
+        let res = [];
+        for (let i = 0; i < arr1.length; i++) {
+          res[2 * i] = arr1[i];
+          res[2 * i + 1] = arr2[i];
+        }
+        return res;
+      }
+      console.log(arrayMash(arr1, arr2));
+
+      // function arrayMash (array1, array2) {
+      //    let newArr = [];
+      //    for(let i=0; i<array1.length; i++) {
+      //      newArr.push(array1[i], array2[i]);
+      //     }
+      //     return newArr;
+      // };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Mash</title>
+  </head>
+  <body>
+    Mash 2 arrays together so that the returning array has alternating elements
+    of the 2 arrays . Both arrays will always be the same length. eg. [1,2,3] +
+    ['a','b','c'] = [1, 'a', 2, 'b', 3, 'c']
+    <script>
+      let arr = [1, true];
+
+      function arr2bin(arr) {
+        let res = 0;
+        const b = arr.filter((el) => typeof el !== "number");
+        if (b.length) {
+          return false;
+        }
+        if (arr.length) {
+          res = arr.reduce((a, b) => a + b);
+        }
+        return (res >>> 0).toString(2);
+      }
+      console.log(arr2bin(arr));
+
+      // function arr2bin(a) {
+      //   if (a.some((x) => typeof x != "number"))
+      //     return false;
+      //   return a.reduce((a, b) => a + b, 0).toString(2);
+      // }
+    </script>
+  </body>
+</html>
