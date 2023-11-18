@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To square(root) or not to square(root)</title>
+  </head>
+  <body>
+    Write a method, that will get an integer array as parameter and will process
+    every number from this array. Return a new array with processing every
+    number of the input-array like this: If the number has an integer square
+    root, take this, otherwise square the number. Example [4,3,9,7,2,1] ->
+    [2,9,3,49,4,1] Notes The input array will always contain only positive
+    numbers, and will never be empty or null.
+    <script>
+      let arr = [4, 3, 9, 7, 2, 1];
+
+      function squareOrSquareRoot(arr) {
+        return arr.map((el) =>
+          Math.sqrt(el) - Math.trunc(Math.trunc(Math.sqrt(el))) === 0
+            ? Math.sqrt(el)
+            : el * el,
+        );
+      }
+      console.log(squareOrSquareRoot(arr));
+
+      //   const squareOrSquareRoot = array => array.map(a => Math.sqrt(a) % 1 == 0 ? Math.sqrt(a) : (a * a));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors!</title>
+  </head>
+  <body>
+    Rock Paper Scissors Let's play! You have to return which player won! In case
+    of a draw return Draw!. Examples(Input1, Input2 --> Output): "scissors",
+    "paper" --> "Player 1 won!" "scissors", "rock" --> "Player 2 won!" "paper",
+    "paper" --> "Draw!"
+    <script>
+      let p1 = "rock",
+        p2 = "scissors";
+      const rps = (p1, p2) => {
+        if (p1 === p2) return "Draw!";
+        if (p1 === "scissors" && p2 !== "rock") return "Player 1 won!";
+      };
+      console.log(rps(p1, p2));
+    </script>
+  </body>
+</html>
