@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse or rotate?</title>
+  </head>
+  <body>
+    We need the ability to divide an unknown integer into a given number of even
+    parts - or at least as even as they can be. The sum of the parts should be
+    the original value, but each part should be an integer, and they should be
+    as close as possible. Complete the function so that it returns an array of
+    integers representing the parts. If the input number is too small to split
+    it into requested amount of parts, the additional parts should have value 0.
+    Ignoring the order of the parts, there is only one valid solution for each
+    input to your function! Example: splitInteger(20, 6) // returns [3, 3, 3, 3,
+    4, 4] Inputs The input to your function will always be valid for this kata.
+    <script>
+      let str = "563000655734469485",
+        sz = 4;
+
+      function revrot(str, sz) {
+        let res = [];
+        if (sz === 0) return "";
+
+        const quantityChunks = Math.floor(str.length / sz);
+
+        if (!quantityChunks) return "";
+
+        let arr = str.split("");
+        arr.length = quantityChunks * sz;
+
+        for (let i = 0; i < quantityChunks; i++) {
+          const chunk = arr.slice(0 + i * sz, (i + 1) * sz);
+
+          const toRotate =
+            chunk.reduce((ac, f) => Number(ac) + Number(f * f * f)) % 2;
+          if (toRotate) {
+            chunk.push(chunk.shift());
+          } else chunk.reverse();
+
+          res = [...res, ...chunk];
+        }
+
+        return res.join("");
+      }
+
+      console.log(revrot(str, sz));
+    </script>
+  </body>
+</html>
