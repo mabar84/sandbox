@@ -4,15 +4,22 @@
     value1
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Squares in a Rectangle</title>
   </head>
   <body>
-    If there are n=5 towels, a pile may be:blue, red, blue, red, blue If I grab t=3 towels during the week, this will be the remaining pile at the end of the
-    week: blue, red The basket will contain the following towels: blue, red, blue After I sorted the washed towels and put them on the pile according to the
-    rule described above, the resulting pile is:blue, red, red, blue, blue Your Task: Sort the Pile You are given an initial pile of towels as a sequence of the
-    strings "red" and "blue". On top of that, you receive a sequence of non-negative integers. The first integer describes the number of used towels t in the
-    first week, the second integer describes the number of used towels t in the second week and so forth. My question is: How will my pile of towels look like
-    in the end, if I use t towels every week and place them on top of the the pile according to the rule defined above? Notes It is ensured that 0 <= t <= n
+    If there are n=5 towels, a pile may be:blue, red, blue, red, blue If I grab
+    t=3 towels during the week, this will be the remaining pile at the end of
+    the week: blue, red The basket will contain the following towels: blue, red,
+    blue After I sorted the washed towels and put them on the pile according to
+    the rule described above, the resulting pile is:blue, red, red, blue, blue
+    Your Task: Sort the Pile You are given an initial pile of towels as a
+    sequence of the strings "red" and "blue". On top of that, you receive a
+    sequence of non-negative integers. The first integer describes the number of
+    used towels t in the first week, the second integer describes the number of
+    used towels t in the second week and so forth. My question is: How will my
+    pile of towels look like in the end, if I use t towels every week and place
+    them on top of the the pile according to the rule defined above? Notes It is
+    ensured that 0 <= t <= n
     <script>
       console.clear();
       //   const pileOfTowels = ["blue", "red", "blue", "red", "blue"];
@@ -30,7 +37,10 @@
         for (i = 0; i < weeklyUsedTowels.length; i++) {
           if (weeklyUsedTowels[i] != 0) {
             pileOfTowels = [
-              ...pileOfTowels.slice(0, pileOfTowels.length - weeklyUsedTowels[i]),
+              ...pileOfTowels.slice(
+                0,
+                pileOfTowels.length - weeklyUsedTowels[i],
+              ),
               ...pileOfTowels
                 .slice(-1 * weeklyUsedTowels[i])
                 .sort()
