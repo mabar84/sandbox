@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Small enough? - Beginner</title>
+  </head>
+  <body>
+    You will be given an array and a limit value. You must check that all values
+    in the array are below or equal to the limit value. If they are, return
+    true. Else, return false. You can assume all values in the array are
+    numbers.
+    <script>
+      let arr = [1, 2, 3],
+        limit = 2;
+      function smallEnough(arr, limit) {
+        for (let index = 0; index < arr.length; index++) {
+          if (arr[index] > limit) {
+            return false;
+          }
+        }
+        return true;
+      }
+      console.log(smallEnough(arr, limit));
+
+      // function smallEnough(a, limit){
+      //   return Math.max(...a) <= limit
+      // }
+
+      //   smallEnough = (a, l) => a.every(e => e <= l)
+    </script>
+  </body>
+</html>
