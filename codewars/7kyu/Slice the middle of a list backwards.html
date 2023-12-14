@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slice the middle of a list backwards</title>
+  </head>
+  <body>
+    Write a function that takes a list of at least four elements as an argument
+    and returns a list of the middle two or three elements in reverse order.
+    <script>
+      let arr = [1, 2, 3, 4, 5];
+
+      function reverseMiddle(arr) {
+        const i = Math.floor(arr.length / 2);
+        return arr.length % 2
+          ? [arr[i + 1], arr[i], arr[i - 1]]
+          : [arr[i], arr[i - 1]];
+      }
+      console.log(reverseMiddle(arr));
+
+      //   function firstReverseTry(arr) {
+      //     return arr.length > 1
+      //       ? arr.slice(-1).concat(arr.slice(1, -1), arr[0])
+      //       : arr;
+      //   }
+    </script>
+  </body>
+</html>
