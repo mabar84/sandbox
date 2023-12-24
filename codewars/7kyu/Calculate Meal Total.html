@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Meal Total</title>
+  </head>
+  <body>
+    Create a function that returns the total of a meal including tip and tax.
+    You should not tip on the tax. You will be given the subtotal, the tax as a
+    percentage and the tip as a percentage. Please round your result to two
+    decimal places.
+    <script>
+      const calculate_total = (subtotal, tax, tip) =>
+        Number(((subtotal * (100 + tax + tip)) / 100).toFixed(2));
+
+      // const calculate_total = (subtotal, tax, tip) => Math.round(subtotal * (100 + tax + tip)) / 100
+
+      console.log(calculate_total(5, 5, 10));
+    </script>
+  </body>
+</html>

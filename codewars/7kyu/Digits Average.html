@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digits Average</title>
+  </head>
+  <body>
+    Given an integer, take the (mean) average of each pair of consecutive
+    digits. Repeat this process until you have a single integer, then return
+    that integer. e.g. Note: if the average of two digits is not an integer,
+    round the result up (e.g. the average of 8 and 9 will be 9) Examples
+    digitsAverage(246) ==> 4 original: 2 4 6 \ / \ / 1st iter: 3 5 \ / 2nd iter:
+    4 digitsAverage(89) ==> 9 original: 8 9 \ / 1st iter: 9 p.s. for a bigger
+    challenge, check out the one line version of this kata by myjinxin2015!
+    <script>
+      let input = 246;
+      function digitsAverage(input) {
+        let arr = input
+          .toString()
+          .split("")
+          .map((el) => +el);
+        let arr2 = [];
+
+        for (let k = 1; k < arr.length; k++) {
+          arr2 = [];
+          for (let i = 0; i < arr.length - k; i++) {
+            arr2.push(Math.ceil((+res[i] + +res[i + 1]) / 2));
+          }
+          console.log(arr2);
+        }
+
+        // for (let i = 0; i < str.length - 1; i++) {
+        //   console.log(Math.ceil(+str[i] + +str[i + 1]));
+        //   arr.push(Math.ceil((+str[i] + +str[i + 1]) / 2));
+        // }
+        // return Math.ceil(
+        //   str.map((el) => +el).reduce((ac, cv) => ac + cv, 0) / str.length,
+        // );
+        return arr2;
+      }
+
+      console.log(digitsAverage(input));
+    </script>
+  </body>
+</html>
