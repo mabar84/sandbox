@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Averages of numbers</title>
+  </head>
+  <body>
+    #Get the averages of these numbers Write a method, that gets an array of
+    integer-numbers and return an array of the averages of each integer-number
+    and his follower, if there is one. Example: Input: [ 1, 3, 5, 1, -10]
+    Output: [ 2, 4, 3, -4.5] If the array has 0 or 1 values or is null, your
+    method should return an empty array. Have fun coding it and please don't
+    forget to vote and rank this kata! :-)
+    <script>
+      let arr = [1, 3, 5, 1, -10];
+      function averages(arr) {
+        if (!arr || arr.length < 2) return [];
+        let res = [];
+        for (let i = 0; i < arr.length - 1; i++) {
+          if (arr[i] === null || arr[i + 1] === null) return [];
+          res[i] = (arr[i] + arr[i + 1]) / 2;
+        }
+        return res;
+      }
+      console.log(averages(arr));
+
+      //   function averages(numbers) {
+      //     return numbers
+      //       ? numbers.map((v, i, a) => (v + a[i + 1]) / 2).slice(0, -1)
+      //       : [];
+      //   }
+    </script>
+  </body>
+</html>
