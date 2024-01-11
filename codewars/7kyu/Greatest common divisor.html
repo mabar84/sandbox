@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greatest common divisor</title>
+  </head>
+  <body>
+    Find the greatest common divisor of two positive integers. The integers can
+    be large, so you need to find a clever solution. The inputs x and y are
+    always greater or equal to 1, so the greatest common divisor will always be
+    an integer that is also greater or equal to 1.
+
+    <script>
+      function mygcd(a, b) {
+        while ((a > 0) & (b > 0)) {
+          a > b ? (a = a % b) : (b = b % a);
+        }
+        return a + b;
+      }
+
+      // function mygcd(x,y){
+      //   return y == 0 ? x : mygcd(y, x % y)
+      // }
+
+      console.log(mygcd(30, 12));
+    </script>
+  </body>
+</html>
