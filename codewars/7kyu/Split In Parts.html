@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split In Parts</title>
+  </head>
+  <body>
+    The aim of this kata is to split a given string into different strings of
+    equal size (note size of strings is passed to the method) Example: Split the
+    below string into other strings of size #3
+    'supercalifragilisticexpialidocious' Will return a new string 'sup erc ali
+    fra gil ist ice xpi ali doc iou s' Assumptions: String length is always
+    greater than 0 String has no spaces Size is always positive
+
+    <script>
+      var splitInParts = function (str, n) {
+        let res = "";
+        let k = Math.floor(str.length / n);
+        let end = str.substring(k * n, str.length);
+        for (let i = 0; i < k; i++) {
+          res += str.slice(i * n, n * (i + 1)) + " ";
+        }
+        res += end;
+        return end.length ? res : res.slice(0, -1);
+      };
+      console.log(splitInParts("HelloKata", 9));
+
+      // var splitInParts = function (s, partLength) {
+      //   return [...s]
+      //     .map((e, i) => ((i + 1) % partLength ? e : e + " "))
+      //     .join("")
+      //     .trim();
+      // };
+    </script>
+  </body>
+</html>
