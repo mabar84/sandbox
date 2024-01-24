@@ -29,33 +29,34 @@
     languages it is not preloaded and you can instead copy the above list if you
     desire.
     <script>
-      //   function eliminateUnsetBits(str) {
-      //     if (str.indexOf("1") < 0) return 0;
-      //     let res = "";
-      //     for (let i = 0; i < str.length; i++) {
-      //       if (str[i] === "1") {
-      //         res += "1";
-      //       }
-      //     }
-      //     return parseInt(+res, 2);
-      //   }
-      console.log(eliminateUnsetBits("111110010110011111100000111011101"));
-
-      function eliminateUnsetBits(number) {
-        let arr = [];
-        for (let i = 0; i < number.length; i++) {
-          if (number[i] === "1") {
-            arr.push(number[i]);
-          }
-        }
-        let res = arr.join("");
-        let a = parseInt(res, 2);
-        if (a > 0) {
-          return a;
-        } else {
-          return 0;
-        }
+      function wallpaper(l, w, h) {
+        const numbers = [
+          "zero",
+          "one",
+          "two",
+          "three",
+          "four",
+          "five",
+          "six",
+          "seven",
+          "eight",
+          "nine",
+          "ten",
+          "eleven",
+          "twelve",
+          "thirteen",
+          "fourteen",
+          "fifteen",
+          "sixteen",
+          "seventeen",
+          "eighteen",
+          "nineteen",
+          "twenty",
+        ];
+        let res = l * w * h ? Math.ceil((2.3 / 5.2) * (l + w) * h) : 0;
+        return numbers[res];
       }
+      console.log(wallpaper(0.0, 3.5, 3.0));
     </script>
   </body>
 </html>
