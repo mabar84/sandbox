@@ -19,34 +19,23 @@
     and y minute(s)" If we don't have to contribute any time to the project then
     return "Easy Money!"
     <script>
-      function wallpaper(l, w, h) {
-        const numbers = [
-          "zero",
-          "one",
-          "two",
-          "three",
-          "four",
-          "five",
-          "six",
-          "seven",
-          "eight",
-          "nine",
-          "ten",
-          "eleven",
-          "twelve",
-          "thirteen",
-          "fourteen",
-          "fifteen",
-          "sixteen",
-          "seventeen",
-          "eighteen",
-          "nineteen",
-          "twenty",
-        ];
-        let res = l * w * h ? Math.ceil((2.3 / 5.2) * (l + w) * h) : 0;
-        return numbers[res];
+      function workNeeded(projectMinutes, freelancers) {
+        let res = 0;
+        freelancers.forEach((el) => {
+          res += el[0] * 60 + el[1];
+        });
+        res = projectMinutes - res;
+        if (res <= 0) return "Easy Money!";
+        const h = Math.floor(res / 60);
+        const m = res % 60;
+        return `I need to work ${h} hour(s) and ${m} minute(s)`;
       }
-      console.log(wallpaper(0.0, 3.5, 3.0));
+      console.log(
+        workNeeded(141, [
+          [1, 55],
+          [0, 25],
+        ]),
+      );
     </script>
   </body>
 </html>
