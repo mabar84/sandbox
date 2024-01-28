@@ -13,23 +13,20 @@
     number two as the base and integer n as the exponent. You may assume the
     input is always valid. Examples
     <script>
-      function workNeeded(projectMinutes, freelancers) {
-        let res = 0;
-        freelancers.forEach((el) => {
-          res += el[0] * 60 + el[1];
-        });
-        res = projectMinutes - res;
-        if (res <= 0) return "Easy Money!";
-        const h = Math.floor(res / 60);
-        const m = res % 60;
-        return `I need to work ${h} hour(s) and ${m} minute(s)`;
+      function isPowerOfTwo(n) {
+        if (n === 1) return true;
+        if (n === 0 || n % 2) return false;
+        while (n > 2) {
+          n = n / 2;
+          if (n % 2) return false;
+        }
+        return true;
       }
-      console.log(
-        workNeeded(141, [
-          [1, 55],
-          [0, 25],
-        ]),
-      );
+      console.log(isPowerOfTwo(128));
+
+      //       function isPowerOfTwo(n){
+      //     return Number.isInteger(Math.log2(n));
+      // }
     </script>
   </body>
 </html>
