@@ -14,20 +14,13 @@
     --> "L E T S G O T O T H E M O V I E S" "Why isn't my code working?" --> "W
     H Y I S N ' T M Y C O D E W O R K I N G ?"
     <script>
-      function isPowerOfTwo(n) {
-        if (n === 1) return true;
-        if (n === 0 || n % 2) return false;
-        while (n > 2) {
-          n = n / 2;
-          if (n % 2) return false;
-        }
-        return true;
-      }
-      console.log(isPowerOfTwo(128));
-
-      //       function isPowerOfTwo(n){
-      //     return Number.isInteger(Math.log2(n));
-      // }
+      const vaporcode = (str) =>
+        str
+          .toUpperCase()
+          .split("")
+          .filter((el) => el !== " ")
+          .join("  ");
+      console.log(vaporcode("Lets go to the movies?"));
     </script>
   </body>
 </html>
