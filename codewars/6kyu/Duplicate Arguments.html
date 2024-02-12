@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duplicate Arguments</title>
+  </head>
+  <body>
+    Complete the solution so that it returns true if it contains any duplicate
+    argument values. Any number of arguments may be passed into the function.
+    The array values passed in will only be strings or numbers. The only valid
+    return values are true and false. Examples: solution(1, 2, 3) --> false
+    solution(1, 2, 3, 2) --> true solution('1', '2', '3', '2') --> true
+    <script>
+      function solution() {
+        const set = new Set(arguments);
+        return set.size !== arguments.length;
+      }
+      console.log(solution(1, 2, 3, 6, 5, 6));
+
+      //       function solution(...args){
+      //    return args.length !== new Set(args).size;
+      // }
+    </script>
+  </body>
+</html>
