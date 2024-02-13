@@ -1,4 +1,5 @@
 {
-  "liveServer.settings.port": 5502,
+  "liveServer.settings.port": 5501,
+  "editor.snippets.codeActions.enabled": false,
   "editor.snippetSuggestions": "top"
 }
