@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Take a picture</title>
+  </head>
+  <body>
+    You are standing on top of an amazing Himalayan mountain. The view is
+    absolutely breathtaking! you want to take a picture on your phone, but...
+    your memory is full again! ok, time to sort through your shuffled photos and
+    make some space... Given a gallery of photos, write a function to sort
+    through your pictures. You get a random hard disk drive full of pics, you
+    must return an array with the 5 most recent ones PLUS the next one (same
+    year and number following the one of the last). You will always get at least
+    a photo and all pics will be in the format YYYY.imgN Examples:
+    sortPhotos["2016.img1","2016.img2","2015.img3","2016.img4","2013.img5"])
+    ==["2013.img5","2015.img3","2016.img1","2016.img2","2016.img4","2016.img5"]
+    sortPhotos["2016.img1"]) ==["2016.img1","2016.img2"]
+    <script>
+      function sortPhotos(pics) {
+        pics = pics
+          .map((el) => {
+            const first = el.slice(0, 8);
+            const last = el.slice(8, 10);
+            return last.length === 2 ? first + last : first + "0" + last;
+          })
+          .sort()
+          .slice(-5)
+          .map((el) => el.slice(0, 8) + Number(el.slice(8, 10)));
+
+        const last = +pics.at(-1).slice(8, 10) + 1;
+        const lastImg = pics.at(-1).slice(0, 8) + last;
+        pics.push(lastImg);
+
+        return pics;
+      }
+    </script>
+  </body>
+</html>
+Testing for [2009.img11, 2012.img6, 2012.img11, 2014.img7, 2014.img1,
+2013.img12, 2008.img4, 2011.img18, 2012.img9, 2012.img8, 2013.img8, 2010.img2,
+2012.img17, 2009.img2] It should work for random inputs too: expected [
+'2012.img9',
