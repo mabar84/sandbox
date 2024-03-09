@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The latest clock</title>
+  </head>
+  <body>
+    Write a function which receives 4 digits and returns the latest time of day
+    that can be built with those digits. The time should be in HH:MM format.
+    Examples: digits: 1, 9, 8, 3 => result: "19:38" digits: 9, 1, 2, 5 =>
+    result: "21:59" ("19:25" is also a valid time, but 21:59 is later)
+    <script>
+      function latestClock(a, b, c, d) {
+        const arr = [a, b, c, d];
+        console.log(arr);
+        let k = 2;
+        let bbb = [];
+        let hours = "";
+        let n = arr.indexOf(2);
+        if (n > -1) {
+          a = arr[n];
+          console.log("a=", a);
+          arr.splice(n, 1);
+          bbb = arr.filter((el) => el < 5).sort();
+          b = bbb.at(-1);
+          arr.splice(arr.indexOf(b), 1);
+          console.log("b=", b);
+
+          console.log(arr);
+        }
+
+        console.log("=========");
+
+        let testarr = ["12", "63", "08", "80", "17"];
+        testarr.sort();
+        console.log(testarr);
+
+        console.log("92" > "03");
+
+        // for (let i = 2; i > 0; i--) {
+        //   if (arr.indexOf(k) > -1) {
+        //     hours += arr[arr.indexOf(k)];
+        //     arr.splice(arr.indexOf(k), 1);
+        //   }
+        // }
+
+        // while (hours.length < 2) {
+        //   for (let i = 1; i <= 2; i++) {
+        //     if (hours.length === 2) return;
+        //     if (arr.indexOf(k) > -1) {
+        //       hours += arr[arr.indexOf(k)];
+        //       arr.splice(arr.indexOf(k), 1);
+        //     }
+        //   }
+
+        //   k--;
+        // }
+        // console.log(hours);
+
+        return `${a}${b}:${c}${d}`;
+      }
+      console.log(latestClock(4, 8, 3, 2));
+    </script>
+  </body>
+</html>
