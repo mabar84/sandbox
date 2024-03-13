@@ -12,55 +12,35 @@
     result: "21:59" ("19:25" is also a valid time, but 21:59 is later)
     <script>
       function latestClock(a, b, c, d) {
-        const arr = [a, b, c, d];
-        console.log(arr);
-        let k = 2;
-        let bbb = [];
-        let hours = "";
-        let n = arr.indexOf(2);
-        if (n > -1) {
-          a = arr[n];
-          console.log("a=", a);
-          arr.splice(n, 1);
-          bbb = arr.filter((el) => el < 5).sort();
-          b = bbb.at(-1);
-          arr.splice(arr.indexOf(b), 1);
-          console.log("b=", b);
+        const arr = [a, b, c, d].map((el) => el.toString());
+        let res = [];
+        let max = "";
+        const isNormalTime = (h1, h2, m1, m2) => {
+          if (h1 + h2 < "24" && m1 + m2 < "60")
+            res.push(h1 + h2 + ":" + m1 + m2);
+          if (h2 + h1 < "24" && m1 + m2 < "60")
+            res.push(h2 + h1 + ":" + m1 + m2);
+          if (h1 + h2 < "24" && m2 + m1 < "60")
+            res.push(h1 + h2 + ":" + m2 + m1);
+          if (h2 + h1 < "24" && m2 + m1 < "60")
+            res.push(h2 + h1 + ":" + m2 + m1);
+        };
+        isNormalTime(arr[0], arr[1], arr[2], arr[3]);
+        isNormalTime(arr[0], arr[2], arr[1], arr[3]);
+        isNormalTime(arr[0], arr[3], arr[1], arr[2]);
+        isNormalTime(arr[1], arr[2], arr[0], arr[3]);
+        isNormalTime(arr[1], arr[3], arr[0], arr[2]);
+        isNormalTime(arr[2], arr[3], arr[0], arr[1]);
 
-          console.log(arr);
+        max = res[0];
+        for (let i = 0; i < res.length; i++) {
+          if (max < res[i]) {
+            max = res[i];
+          }
         }
-
-        console.log("=========");
-
-        let testarr = ["12", "63", "08", "80", "17"];
-        testarr.sort();
-        console.log(testarr);
-
-        console.log("92" > "03");
-
-        // for (let i = 2; i > 0; i--) {
-        //   if (arr.indexOf(k) > -1) {
-        //     hours += arr[arr.indexOf(k)];
-        //     arr.splice(arr.indexOf(k), 1);
-        //   }
-        // }
-
-        // while (hours.length < 2) {
-        //   for (let i = 1; i <= 2; i++) {
-        //     if (hours.length === 2) return;
-        //     if (arr.indexOf(k) > -1) {
-        //       hours += arr[arr.indexOf(k)];
-        //       arr.splice(arr.indexOf(k), 1);
-        //     }
-        //   }
-
-        //   k--;
-        // }
-        // console.log(hours);
-
-        return `${a}${b}:${c}${d}`;
+        return max;
       }
-      console.log(latestClock(4, 8, 3, 2));
+      console.log(latestClock(2, 4, 0, 0));
     </script>
   </body>
 </html>
