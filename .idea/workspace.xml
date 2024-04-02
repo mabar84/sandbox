@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a193b1ed-718c-4586-9024-2b2256ee267b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/codewars/7kyu/NATO-Phonetic-Alphabet.html" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/7kyu/NATO-Phonetic-Alphabet.html" afterDir="false" />
@@ -15,10 +18,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2dzosIxpkhAJyLwhOJQVitSHixr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,6 +32,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -42,6 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711020474416</updated>
       <workItem from="1711020477015" duration="3000" />
+      <workItem from="1711197568608" duration="594000" />
     </task>
     <servers />
   </component>

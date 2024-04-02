@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyramid Array</title>
+  </head>
+  <body>
+    Write a function that when given a number >= 0, returns an Array of
+    ascending length subarrays. pyramid(0) => [ ] pyramid(1) => [ [1] ]
+    pyramid(2) => [ [1], [1, 1] ] pyramid(3) => [ [1], [1, 1], [1, 1, 1] ] Note:
+    the subarrays should be filled with 1s
+    <script>
+      function pyramid(n) {
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+          arr[i] = new Array(i + 1).fill(1);
+        }
+        return arr;
+      }
+      console.log(pyramid(2));
+    </script>
+  </body>
+</html>
