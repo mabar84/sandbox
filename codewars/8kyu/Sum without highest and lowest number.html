@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum without highest and lowest number</title>
+  </head>
+  <body>
+    Task Sum all the numbers of a given array ( cq. list ), except the highest
+    and the lowest element ( by value, not by index! ). The highest or lowest
+    element respectively is a single element at each edge, even if there are
+    more than one with the same value. Mind the input validation. Example { 6,
+    2, 1, 8, 10 } => 16 { 1, 1, 11, 2, 3 } => 6 Input validation If an empty
+    value ( null, None, Nothing etc. ) is given instead of an array, or the
+    given array is an empty list or a list with only 1 element, return 0.
+
+    <script>
+      function sumArray(arr) {
+        if (!Array.isArray(arr)) {
+          return 0;
+        }
+        if (arr.length < 3) return 0;
+        let min = arr[0];
+        let max = arr[0];
+        let res = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+          if (min > arr[i]) {
+            min = arr[i];
+          }
+          if (max < arr[i]) {
+            max = arr[i];
+          }
+          res += arr[i];
+        }
+        return res - min - max;
+      }
+
+      const arr = [6, 2, 1, 8, 10];
+      console.log(sumArray(arr));
+    </script>
+  </body>
+</html>
