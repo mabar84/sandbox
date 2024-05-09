@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Метод двух указателей</title>
+  </head>
+  <body>
+    <h1>или метод скользящего окна</h1>
+    'abcbada'=>4 'axbxcxd'=>3 'aaaaaaa'=>1 'abcdefg'=>7 'abcbdbefg'=>5
+    <script>
+      let str = "abcbdbefg";
+      function foo(str) {
+        let answer = 0,
+          l = 0,
+          r = 0,
+          set = new Set();
+        while (r < str.length) {
+          let c = str[r];
+          if (!set.has(c)) {
+            set.add(c);
+            answer = Math.max(answer, r - l + 1);
+            r++;
+          } else {
+            while (set.has(c)) {
+              set.delete(str[l]);
+              l++;
+            }
+          }
+        }
+        return answer;
+      }
+      console.log(foo(str));
+    </script>
+  </body>
+</html>
