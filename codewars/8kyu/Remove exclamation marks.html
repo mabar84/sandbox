@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove exclamation marks</title>
+  </head>
+  <body>
+    <h1>или метод скользящего окна</h1>
+    'abcbada'=>4 'axbxcxd'=>3 'aaaaaaa'=>1 'abcdefg'=>7 'abcbdbefg'=>5
+    <script>
+      let s = "abcbd!!bef!!g";
+      function removeExclamationMarks(s) {
+        let answer = "";
+        for (const el of s) {
+          if (el !== "!") {
+            answer += el;
+          }
+        }
+        return answer;
+      }
+      console.log(removeExclamationMarks(s));
+
+      function removeExclamationMarks(s) {
+        return s.split("!").join("");
+      }
+
+      function removeExclamationMarks(s) {
+        return s.replace(/!/g, "");
+      }
+    </script>
+  </body>
+</html>
