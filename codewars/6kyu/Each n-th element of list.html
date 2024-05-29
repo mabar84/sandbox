@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Each n-th element of list</title>
+  </head>
+  <body>
+    In this task, you need to write a function each, that takes an integer
+    number n and a ( possibly empty ) list of integers, and returns a list of
+    every nth element of the input list ( which possibly is the empty list ). If
+    n < 0, count by abs n from the end of the list. If n == 0, return an empty
+    list. Examples each 0 [1,2,3,4,5,6] = [] each 1 [1,2,3,4,5,6] =
+    [1,2,3,4,5,6] each (-1) [1,2,3,4,5,6] = [6,5,4,3,2,1] each 2 [1,2,3,4,5,6] =
+    [2,4,6] each (-2) [1,2,3,4,5,6] = [5,3,1] each 3 [1,2] = [] each (-3) [1,2]
+    = [] each 5 [1,2,3,4,5,6,7] = [5] each (-5) [1,2,3,4,5,6,7] = [3]
+    <script>
+      let arr = [1, 2, 3, 4, 5, 6, 7];
+      const n = -5;
+
+      function each(n, arr) {
+        let res = [];
+        if (n === 0) {
+          return [];
+        }
+        if (n < 0) {
+          n = n * -1;
+          arr.reverse();
+        }
+        const total = Math.floor(arr.length / n);
+        for (let i = 1; i <= total; i++) {
+          res.push(arr[i * n - 1]);
+        }
+        return res;
+      }
+
+      function each(n, xs) {
+        return n < 0 && xs.reverse(), xs.filter((_, i) => ++i % n < 1);
+      }
+    </script>
+  </body>
+</html>
