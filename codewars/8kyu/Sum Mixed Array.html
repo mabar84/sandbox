@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    value1
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Mixed Array</title>
+  </head>
+  <body>
+    Given an array of integers as strings and numbers, return the sum of the
+    array values as if all were numbers. Return your answer as a number.
+    <script>
+      let x = ["8"];
+      function sumMix(x) {
+        return x.map((el) => Number(el)).reduce((a, b) => a + b);
+      }
+
+      console.log(sumMix(x));
+    </script>
+  </body>
+</html>
