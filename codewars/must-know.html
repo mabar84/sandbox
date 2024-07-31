@@ -81,6 +81,42 @@
       /////////////////////////////////////////////////////////
       const sumTo = (n) => (n ? n + sumTo(n - 1) : 0);
       console.log("sumTo", n, "=", sumTo(n));
+      /////////////////////////////////////////////////////////
+      //////////////////////   reduce   ///////////////////////
+      const cities = ["Minsk", "Moscow", "", "", "London"];
+      console.log("Непустых", cities.filter((el) => el).length);
+      let withReduce = cities.reduce((acc, el) => {
+        el && acc++;
+        return acc;
+      }, 0);
+      console.log("cities withReduce", withReduce);
+      /////////////////////////////////////////////////////////
+      const users = [
+        { age: 18, sex: "f", name: "Sveta" },
+        { age: 17, sex: "f", name: "Sashka" },
+        { age: 10, sex: "f", name: "Marfa" },
+        { age: 88, sex: "f", name: "Frosia" },
+        { age: 19, sex: "m", name: "Andrew" },
+      ];
+      let res = users.reduce((acc, el) => {
+        if (el.age >= 18 && el.sex === "f") {
+          acc.push(el);
+        }
+        return acc;
+      }, []);
+      console.log("Girls 18+", res);
+      console.log(
+        "with filter",
+        users.filter((el) => el.age >= 18 && el.sex === "f"),
+      );
+      /////////////////////////////////////////////////////////
+      console.log(
+        "sum=",
+        [1, 4, 6, 66, -12].reduce((acc, el) => {
+          acc += el;
+          return acc;
+        }, 100),
+      );
     </script>
   </body>
 </html>
