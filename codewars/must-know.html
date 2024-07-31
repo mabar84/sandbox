@@ -117,6 +117,74 @@
           return acc;
         }, 100),
       );
+
+      function makeCounter() {
+        var currentCount = 1;
+        return function () {
+          // (**)
+          return currentCount++;
+        };
+      }
+      ////////////////////////   counter   /////////////////////////////////
+      // var currentCount = 1;
+
+      function makeCounter() {
+        var currentCount = 1;
+        return function () {
+          // (**)
+          return currentCount++;
+        };
+      }
+      var counter = makeCounter(); // (*)
+
+      // каждый вызов увеличивает счётчик и возвращает результат
+      // alert(counter()); // 1
+      // alert(counter()); // 2
+      // alert(counter()); // 3
+
+      // создать другой счётчик, он будет независим от первого
+      var counter2 = makeCounter();
+      // alert(counter2()); // 1
+
+      ////////////////////////   classes   /////////////////////////////////
+      class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+        walk() {
+          console.log("I walk222: " + this.name);
+        }
+        eat() {
+          console.log("I can eat");
+        }
+      }
+
+      // const anim = new Animal("anim");
+      // anim.walk();
+      class Rabbit extends Animal {
+        walk2() {
+          super.walk();
+          console.log("...and jump!");
+        }
+      }
+
+      var rabbit = new Rabbit("Bunny");
+      rabbit.walk();
+      rabbit.eat();
+
+      ////////////////////////   promises   /////////////////////////////////
+
+      function doItAfter(seconds) {
+        let promise = new Promise((resolve, reject) => {
+          setInterval(() => {
+            resolve();
+          }, seconds * 1000);
+        });
+        return promise;
+      }
+      doItAfter(1)
+        .then(() => console.log("res"))
+        .catch(() => console.log("rej"));
     </script>
   </body>
 </html>
