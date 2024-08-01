@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Repeats</title>
+  </head>
+  <body>
+    Write a function that returns the count of characters that have to be
+    removed in order to get a string with no consecutive repeats. Note: This
+    includes any characters Examples 'abbbbc' => 'abc' # answer: 3 'abbcca' =>
+    'abca' # answer: 2 'ab cca' => 'ab ca' # answer: 1
+    <script>
+      let str = "12345";
+      function countRepeats(str) {
+        let count = 0;
+        for (let i = 0; i < str.length - 1; i++) {
+          if (str[i] === str[i + 1]) {
+            count++;
+          }
+        }
+        return count;
+      }
+      console.log(countRepeats(str));
+    </script>
+  </body>
+</html>
