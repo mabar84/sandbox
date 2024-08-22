@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove all exclamation marks</title>
+  </head>
+  <body>
+    Description: Remove all exclamation marks from sentence but ensure a
+    exclamation mark at the end of string. For a beginner kata, you can assume
+    that the input data is always a non empty string, no need to verify it.
+    Examples "Hi!" ---> "Hi!" "Hi!!!" ---> "Hi!" "!Hi" ---> "Hi!" "!Hi!" --->
+    "Hi!" "Hi! Hi!" ---> "Hi Hi!" "Hi" ---> "Hi!"
+    <script>
+      const str = "H!!!!i! Hi!";
+      function remove(str) {
+        return str.replace(/!/g, "") + "!";
+        // return (
+        //   str
+        //     .split("")
+        //     .filter((el) => el !== "!")
+        //     .join("") + "!"
+        // );
+      }
+      console.log(remove(str));
+    </script>
+  </body>
+</html>
