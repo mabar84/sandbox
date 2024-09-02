@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grader</title>
+  </head>
+  <body>
+    Wilson primes satisfy the following condition. Let P P represent a prime
+    number. Then, should give a whole number, where P ! P! is the factorial of P
+    P. Your task is to create a function that returns true if the given number
+    is a Wilson prime and false otherwise.
+
+    <script>
+      const p = 563;
+      //   function amIWilson(p) {
+      //     const factorial = (n) => {
+      //       if (n <= 1) return BigInt(1);
+      //       return BigInt(n) * BigInt(factorial(n - 1));
+      //     };
+      //     const res = factorial(p - 1);
+
+      //     return !((BigInt(res) + BigInt(1)) / (BigInt(p) * BigInt(p)) > 0);
+      //   }
+
+      function amIWilson(p) {
+        p = BigInt(p);
+        const fac = (n) => (n ? n * fac(n - 1n) : 1n);
+        const d = fac(p - 1n) + 1n;
+        return !(d % (p * p));
+      }
+      console.log(amIWilson(p));
+    </script>
+  </body>
+</html>
