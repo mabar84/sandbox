@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chunky strings</title>
+  </head>
+  <body>
+    This kata concerns a string composed of 'chunks'. A chunk is either: A
+    single alphabetic character or: Two chunks enclosed in square brackets [ and
+    ] A 'chunky string' is a string consisting of exactly one chunk. Here are
+    some examples of chunky strings: 'x' '[xy]' '[x[yy]]' '[[xy]y]' '[[ab][ab]]'
+    '[c[o[d[e[w[a[rs]]]]]]]' For this task you will be given a valid chunky
+    string from which all the closing brackets have been removed. You must
+    restore the brackets and return the original valid chunky string. For
+    example: Input Restored String 'x' 'x' '[xy' '[xy]' '[x[yy' '[x[yy]]'
+    '[[xyy' '[[xy]y]' '[[ab[ab' '[[ab][ab]]' '[c[o[d[e[w[a[rs'
+    '[c[o[d[e[w[a[rs]]]]]]]' In the tests all input strings will be valid chunky
+    strings (with closing brackets removed).
+    <script>
+      const s = "[[ab[ab";
+      //   const s = "[c[o[d[e[w[a[rs";
+
+      function restoreBrackets(s) {
+        let l = 0,
+          r = 0;
+
+        for (let i = 0; i < s.length - 2; i++) {
+          if (
+            s[i] !== "[" &&
+            s[i] !== "]" &&
+            s[i + 1] !== "[" &&
+            s[i + 1] !== "]"
+          ) {
+            s = s.slice(0, i + 2) + "]" + s.slice(3);
+          }
+        }
+
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] === "[") l++;
+          if (s[i] === "]") r++;
+        }
+        for (let i = 0; i < l - r; i++) {
+          s += "]";
+        }
+
+        return s;
+      }
+      console.log(restoreBrackets(s));
+
+      function restoreBrackets([...s]) {
+        function buildChunk() {
+          const head = s.shift();
+          return head === "[" ? `[${buildChunk()}${buildChunk()}]` : head ?? "";
+        }
+
+        return buildChunk();
+      }
+    </script>
+  </body>
+</html>
