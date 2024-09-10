@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tests</title>
+  </head>
+  <body>
+    test
+
+    <div>
+      <script
+        class="amocrm_oauth"
+        charset="utf-8"
+        data-client-id="31941706"
+        data-title="Button"
+        data-compact="false"
+        data-class-name="className"
+        data-color="default"
+        data-state="state"
+        data-error-callback="functionName"
+        data-mode="popup"
+        src="https://www.amocrm.ru/auth/button.min.js"
+      ></script>
+    </div>
+
+    <script>
+      const arr = [
+        {
+          id: "2",
+        },
+        {
+          id: "4",
+        },
+        {
+          id: "3",
+        },
+        {
+          id: "1",
+        },
+      ];
+
+      function CometIo(arr) {
+        this.getSortedArray = function () {
+          function deepFreeze(obj) {
+            const propNames = Object.getOwnPropertyNames(obj);
+            propNames.forEach((name) => {
+              const prop = obj[name];
+              if (typeof prop === "object" && prop !== null) {
+                deepFreeze(prop);
+              }
+            });
+            return Object.freeze(obj);
+          }
+
+          return deepFreeze([...arr].sort((a, b) => a.id - b.id));
+        };
+      }
+
+      const a = new CometIo(arr);
+      let obj = a.getSortedArray();
+      obj[0].id = 234;
+      obj[1] = 456;
+      console.log("obj=", obj);
+      console.log("arr=", arr);
+    </script>
+  </body>
+</html>
